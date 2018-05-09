@@ -11,6 +11,15 @@ footer {
     right: 0;
 
 }
+.panel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 94%;
+    z-index: 10;
+    background-color: black
+}
 
 #logo {
     position: absolute;
@@ -20,7 +29,25 @@ footer {
     height: ;
     z-index: 10;
     border: 5px black solid;
+    border-radius: 5px;
+}
+
+#tr_hamburger {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    border: 3px black solid;
     border-radius: 10px;
+    z-index: 10;/* 10 */
+}
+
+#tr_krestik {
+    position: absolute;
+    right: 50px;/* 0 */
+    top: 0;
+    border: 3px black solid;
+    border-radius: 10px;
+    z-index: 10 /* 10 */
 }
 
 #nechet {
@@ -62,20 +89,4 @@ html {
 }
 
 
-#tr_hamburger {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border: 3px black solid;
-    border-radius: 10px;
-    z-index: -10;/* 10 */
-}
 
-#tr_krestik {
-    position: absolute;
-    right: 50px;/* 0 */
-    top: 0;
-    border: 3px black solid;
-    border-radius: 10px;
-    z-index: -10 /* 10 */
-}
