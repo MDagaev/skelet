@@ -22,12 +22,12 @@
 
  <!--       <div id="tr_krestik" class="trigger">
             <img src="../images/krestik.jpg"> -->
-        </div>
-
     </div>
+
+
     <div id="nechet" class="video">
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MRlcC2qu2Jk?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="<?=$video['video']?>?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <!--<div id="chet" class="video">
 
