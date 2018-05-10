@@ -6,5 +6,5 @@ require_once("models/func.php"); //подгружаем файлы
 $link = db_connect();
 $video = video_get($link, $_GET['id']);   //определяем новые переменные которые пойдут в файл ниже
 
-include("views/testvideo.php");     //подгружаем файл.
+include("views/video.php");     //подгружаем файл.
 ?>

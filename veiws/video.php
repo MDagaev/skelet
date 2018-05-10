@@ -17,7 +17,7 @@
         </div>
 
         <div id="tr_hamburger" class="trigger">
-            <a href="../veiws/form.html"><img src="../images/hamburger_iconsvg.jpg"></a>
+            <a href="../veiws/form.php"><img src="../images/hamburger_iconsvg.jpg"></a>
         </div>
 
  <!--       <div id="tr_krestik" class="trigger">

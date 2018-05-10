@@ -1,7 +1,4 @@
 <?php
-
-
-
 //берет  и вытаскивает 1 видео из базы //////////////////
 function video_get($link, $id_video){
     //Запрос
@@ -17,7 +14,7 @@ function video_get($link, $id_video){
 }
 
 //добавляет новое видео(пока не используем)//////////////
-function videos_new($link, $names, $datetime, $timezone){
+function videos_add($link, $names, $datetime, $timezone){
 
 }
 
@@ -26,34 +23,3 @@ function videos_delete($id){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
-?>
