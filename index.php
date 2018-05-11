@@ -18,7 +18,7 @@ if($action == "add"){
     }
     include("views/form.php");
 }else{
-    $video = video_get($link, $_GET['id']);
+    $video = video_getRand($link);
     include("views/video.php>");
 //echo var_dump($video);
 }

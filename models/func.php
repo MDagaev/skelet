@@ -1,5 +1,5 @@
 <?php
-//берет  и вытаскивает 1 видео из базы //////////////////
+//берет  и вытаскивает 1 видео из базы по ID //
 function video_get($link, $id_video){
     //Запрос
     $query = sprintf("SELECT * FROM video WHERE id=%d", (int)$id_video);
@@ -13,8 +13,23 @@ function video_get($link, $id_video){
     return $video;
 }
 
-//добавляет новое видео//////////////
 
+//берет и вытаскивает 1 видео выбранное случайным образом из базы //////////////////
+function video_getRand($link){
+    //Запрос
+    $query = "SELECT * FROM video ORDER BY RAND() LIMIT 1";
+    $result = mysqli_query($link, $query);
+
+    if (!$result)
+        die(mysqli_error($link));
+
+    $video = mysqli_fetch_assoc($result);
+
+    return $video;
+}
+
+
+//добавляет новое видео//////////////
 function video_add($link, $video, $datetime, $timezone)
 {    //Подготовка
     $video = trim($video);
