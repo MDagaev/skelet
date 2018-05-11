@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Yshorts</title>
-    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+    <link href="./css/styles.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="scripts/jquery-3.2.1.min.js"></script>
     <script src="scripts/rotation.js"></script>
@@ -13,11 +13,11 @@
 <body>
     <div class="panel">
         <div id="logo">
-            <img src="../images/yshorts.jpg">
+            <img src="./images/yshorts.jpg">
         </div>
 
         <div id="tr_hamburger" class="trigger">
-            <a href="../veiws/form.php"><img src="../images/hamburger_iconsvg.jpg"></a>
+            <a href="./views/form.php?action=add"><img src="./images/hamburger_iconsvg.jpg"></a>
         </div>
 
  <!--       <div id="tr_krestik" class="trigger">

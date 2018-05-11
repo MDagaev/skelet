@@ -13,13 +13,43 @@ function video_get($link, $id_video){
     return $video;
 }
 
-//добавляет новое видео(пока не используем)//////////////
-function videos_add($link, $names, $datetime, $timezone){
+//добавляет новое видео//////////////
 
+function video_add($link, $video, $datetime, $timezone)
+{    //Подготовка
+    $video = trim($video);
+
+    //datetyme, берем из компьютера
+    $datetime = date('Y-m-d H:i:s');
+
+    //tymezone,  надо узнать?
+    $timezone = '';
+
+    //Проверка
+    if ($video == '')
+        return false;
+
+    //Запрос
+    $t = "INSERT INTO video (video, datetime, timezone) VALUES ('%s', '%s', '%s')";
+
+    $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetime), mysqli_real_escape_string($link, $timezone));
+
+
+    $result = mysqli_query($link, $query);
+
+    if (!$result)
+    {
+        die (mysqli_error($link));
+    }
+
+    return true;
 }
+
+
 
 //удаляет видео из базы данных (пока не используем)//////
-function videos_delete($id){
+function video_delete($id){
 
 }
 
+?>
