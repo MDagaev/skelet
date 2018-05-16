@@ -5,14 +5,7 @@
     <title>Paste a link to the video</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script>
-    function myTimezone(){
-        //здесь код вычисления таймзоны
-        var g = new Date();
-        return document.write(g.getTimezoneOffset());
-    }
-        document.getElementById("tzone").value = myTimezone();
-    </script>
+
 </head>
 
 <body>
@@ -25,7 +18,7 @@
                     <br />
                     <input type="text" name="video" value="" size="45" class="form-item" autofocus required>
                     <input type="hidden" name="datetim" value="<?=date('Y-m-d H:i:s')?>">
-                    <input type="hidden" name="timezone" id="tzone" value="UTS+8"><br />
+                    <input type="hidden" name="timezone" id="tzone"><br />
                 </label><br />
                 <label>
                     <input type="submit" name="save" value="Сохранить" class="btn">
@@ -43,5 +36,14 @@
             <p>Copyright&copy; tavintavan</p>
         </footer>
     </div>
+    <script>
+    function myTimezone()
+    {
+        //здесь код вычисления таймзоны
+        var g = new Date();
+        return g.getTimezoneOffset();
+    }
+        document.getElementById("tzone").value = myTimezone();
+    </script>
 </body>
 </html>
