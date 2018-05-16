@@ -1,5 +1,6 @@
 <?php
-//берет  и вытаскивает 1 видео из базы по ID //
+//////////////////////////////////////////////////////////////////////////////////////
+//берет  и вытаскивает 1 видео из базы по ID ////////////////////////////////////////
 function video_get($link, $id_video){
     //Запрос
     $query = sprintf("SELECT * FROM video WHERE id=%d", (int)$id_video);
@@ -13,11 +14,13 @@ function video_get($link, $id_video){
     return $video;
 }
 
-
+////////////////////////////////////////////////////////////////////////////////////
 //берет и вытаскивает 1 видео выбранное случайным образом из базы //////////////////
 function video_getRand($link){
     //Запрос
     $query = "SELECT * FROM video ORDER BY RAND() LIMIT 1";
+    // Заменbnm на более быстрый вариант pfghjcf
+
     $result = mysqli_query($link, $query);
 
     if (!$result)
@@ -28,26 +31,21 @@ function video_getRand($link){
     return $video;
 }
 
-
-//добавляет новое видео//////////////
-function video_add($link, $video, $datetime, $timezone)
+//////////////////////////////////////////////////////////////////////////////////////
+//добавляет новое видео///////////////////////////////////////////////////////////////
+function video_add($link, $video, $datetim, $timezone)
 {    //Подготовка
-    $video = trim($video);
-
-    //datetyme, берем из компьютера
-    $datetime = date('Y-m-d H:i:s');
-
-    //tymezone,  надо узнать?
-    $timezone = '';
+    $video = substr(trim($video), 17);
+    //$video = substr($video, 17);
 
     //Проверка
     if ($video == '')
         return false;
 
     //Запрос
-    $t = "INSERT INTO video (video, datetime, timezone) VALUES ('%s', '%s', '%s')";
+    $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
 
-    $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetime), mysqli_real_escape_string($link, $timezone));
+    $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetim), mysqli_real_escape_string($link, $timezone));
 
 
     $result = mysqli_query($link, $query);
@@ -61,8 +59,8 @@ function video_add($link, $video, $datetime, $timezone)
 }
 
 
-
-//удаляет видео из базы данных (пока не используем)//////
+/////////////////////////////////////////////////////////////////////////////////////
+//удаляет видео из базы данных (пока не используем)///////////////////////////////////
 function video_delete($id){
 
 }

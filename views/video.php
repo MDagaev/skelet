@@ -17,7 +17,7 @@
         </div>
 
         <div id="tr_hamburger" class="trigger">
-            <a href="./views/form.php?action=add"><img src="./images/hamburger_iconsvg.jpg"></a>
+            <a href="./admin/index.php?action=add"><img src="./images/hamburger_iconsvg.jpg"></a>
         </div>
 
  <!--       <div id="tr_krestik" class="trigger">
@@ -27,14 +27,19 @@
 
     <div id="nechet" class="video">
 
-        <iframe width="560" height="315" src="<?=$video['video']?>?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/<?=$video['video']?>?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     <!--<div id="chet" class="video">
 
        <iframe width="560" height="315" src="https://www.youtube.com/embed/0hcaaKhGL00?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     -->
+    <?php echo "<pre>";
+            var_dump($_POST);
+            var_dump($_GET);
+        echo "</pre>";
 
+    ?>
     <footer><p>copyright &copy; tavintavan</p>
     </footer>
 </body>
