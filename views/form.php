@@ -25,13 +25,7 @@
                 </label>
             </form>
         </div>
-        <?php
-        echo "<pre>";
-            var_dump($_POST);
-            var_dump($_GET);
-        echo "</pre>";
 
-        ?>
         <footer>
             <p>Copyright&copy; tavintavan</p>
         </footer>
@@ -41,7 +35,8 @@
     {
         //здесь код вычисления таймзоны
         var g = new Date();
-        return g.getTimezoneOffset();
+        var utc = "UTC " + (g.getTimezoneOffset())/(-60).toString();
+        return utc;
     }
         document.getElementById("tzone").value = myTimezone();
     </script>

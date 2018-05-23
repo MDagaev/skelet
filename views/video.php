@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>Yshorts</title>
     <link href="./css/styles.css" type="text/css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="scripts/jquery-3.2.1.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="scripts/rotation.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
@@ -27,20 +28,43 @@
 
     <div id="nechet" class="video">
 
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/<?=$video['video']?>?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DiEPdoOZJKM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-    <!--<div id="chet" class="video">
 
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/0hcaaKhGL00?&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    -->
-    <?php echo "<pre>";
-            var_dump($_POST);
-            var_dump($_GET);
-        echo "</pre>";
 
-    ?>
     <footer><p>copyright &copy; tavintavan</p>
     </footer>
+    <script>
+        //скрипт вытаскивает 1 видео случайным образом из БД без перезагрузки ajax'ом
+        $("document").ready(function(){
+            //первый вызов функции getVideo()
+            getVideo();
+
+            //вызов getVideo() каждые 5 секунд ПОМЕНЯТЬ на 23 секунды
+           setInterval(function(){
+                getVideo();
+            }, 23000);
+
+            //сама функция getVideo()
+           function getVideo(){
+                $.ajax({
+                    url: './models/getVideo.php',
+                    type: 'POST',
+                    //подготовка
+                    success: function(ansdata){
+                    //alert(ansdata);//Даные приходят из getVideo.php
+                    ansdata = jQuery.parseJSON(ansdata);
+                    //console.log(ansdata);//данные преобразуются в объекты
+                    //работа со строкой 30 замена части строки данными из ansdata
+                    $("iframe").attr("src", "http://www.youtube.com/embed/" + ansdata['video'] + "?rel=0&amp;controls=0&amp;showinfo=0").play();
+                     //запуск автоплей  для хрома
+
+                    }
+                });
+           }
+
+
+        });
+    </script>
 </body>
 </html>
