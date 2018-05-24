@@ -28,7 +28,7 @@
 
     <div id="nechet" class="video">
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DiEPdoOZJKM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DiEPdoOZJKM?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
 
@@ -55,9 +55,10 @@
                     //alert(ansdata);//Даные приходят из getVideo.php
                     ansdata = jQuery.parseJSON(ansdata);
                     //console.log(ansdata);//данные преобразуются в объекты
-                    //работа со строкой 30 замена части строки данными из ansdata
-                    $("iframe").attr("src", "http://www.youtube.com/embed/" + ansdata['video'] + "?rel=0&amp;controls=0&amp;showinfo=0").play();
-                     //запуск автоплей  для хрома
+                    //работа со строкой 30 замена части строки данными из ansdata, добавление ;mute=1;
+                    $("iframe").attr("src", "http://www.youtube.com/embed/" + ansdata['video'] + "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0");
+                    //запуск автоплей  для хрома
+                    //$("iframe").attr("allow", "autoplay; encrypted-media");
 
                     }
                 });
