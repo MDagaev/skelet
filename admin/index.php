@@ -17,7 +17,7 @@ if($action == "add"){
 
         video_add($link, $_POST['video'], $_POST['datetim'], $_POST['timezone']);
         header("Location: ../index.php");
-    }
+    }//если значение не записалось...........остаемся на странице admin/index.php
 }
 
 

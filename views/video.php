@@ -36,9 +36,13 @@
     </footer>
     <script>
         //скрипт вытаскивает 1 видео случайным образом из БД без перезагрузки ajax'ом
-        $("document").ready(function(){
+/*        $("document").ready(function(){
             //первый вызов функции getVideo()
-            getVideo();
+            //getVideo();
+
+            //кликаем по ifram и запускаем play
+            $("iframe").click();
+
 
             //вызов getVideo() каждые 5 секунд ПОМЕНЯТЬ на 23 секунды
            setInterval(function(){
@@ -65,7 +69,8 @@
            }
 
 
-        });
+        });*/
     </script>
+
 </body>
 </html>

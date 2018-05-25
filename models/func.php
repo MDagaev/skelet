@@ -35,14 +35,16 @@ function video_getRand($link){
 //////////////////////////////////////////////////////////////////////////////////////
 //добавляет новое видео///////////////////////////////////////////////////////////////
 function video_add($link, $video, $datetim, $timezone)
-{    //Подготовка
+{
+    //Подготовка
     $video = trim($video);
 
     $tube = "https://youtu.be/";
 
-    //Проверка: если $video пустое значение и значение $tube НЕ равно первым 17символам $video
-    if ($video == '' and $tube !== substr($video), 0, 17)
+    //Проверка: если $video пустое значение ИЛИ значение $tube НЕ равно первым 17символам $video
+    if ($video == '' or $tube !== substr($video, 0, 17))
         return false;
+
 
     $video = substr(trim($video), 17);
 

@@ -30,15 +30,7 @@
             <p>Copyright&copy; tavintavan</p>
         </footer>
     </div>
-    <script>
-    function myTimezone()
-    {
-        //здесь код вычисления таймзоны
-        var g = new Date();
-        var utc = "UTC " + (g.getTimezoneOffset())/(-60).toString();
-        return utc;
-    }
-        document.getElementById("tzone").value = myTimezone();
-    </script>
+
+<script src="../scripts/timezone.js"></script>
 </body>
 </html>
