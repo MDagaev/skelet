@@ -1,9 +1,13 @@
+p {
+   height: 1px;
+}
 
-
+html {
+    background-color:black;
+}
 
 .container{
     background: ;
-
 }
 
 body {
@@ -22,6 +26,7 @@ footer {
     right: 0;
 
 }
+
 .panel{
     position: absolute;
     top: 0;
@@ -44,7 +49,7 @@ footer {
     border-radius: 5px;
 }
 
-#likes {
+#liked {
     position: absolute;
     top: 20px;
     left: 220px;
@@ -53,6 +58,38 @@ footer {
     z-index: 10;
 /*    border: 5px black solid;*/
     border-radius: 5px;
+}
+
+#mylikes {
+    position: absolute;
+    top: 15px;
+    right: 195px;
+
+    width: ;
+    height: ;
+    z-index: 10;
+/*    border: 5px black solid;*/
+    border-radius: 5px;
+    color: white;
+}
+
+#finger {
+    position: absolute;
+    top: 16px;
+    right: 100px;
+    width: ;
+    height: ;
+    z-index: 10;
+    /*border: 1px black solid;*/
+    /*border-radius: 7px;*/
+
+}
+
+#palets {
+    width: 42px;
+    height: 32px;
+    border: 2px black solid;
+    border-radius: 7px;
 }
 
 #tr_hamburger {
@@ -101,15 +138,8 @@ footer {
 }
 
 
-p {
-   height: 1px;
-
-}
 
 
-html {
-    background-color:black;
-}
 
 
 

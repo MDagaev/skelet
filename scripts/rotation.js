@@ -22,19 +22,19 @@
 *//////////////////////////////////////////////////////////////////////////////
 //скрипт вытаскивает 1 видео случайным образом из БД без перезагрузки ajax'ом
         $("document").ready(function(){
-            //первый вызов функции getVideo()
+            //1. первый вызов функции getVideo()
             //getVideo();
 
-            //кликаем по ifram и запускаем play
+            //2. кликаем по ifram и запускаем play
             $("iframe").click();
 
 
-            //вызов getVideo() каждые 5 секунд ПОМЕНЯТЬ на 23 секунды
+            //3. вызов getVideo() каждые 5 секунд ПОМЕНЯТЬ на 23 секунды
            setInterval(function(){
                 getVideo();
             }, 23000);
 
-            //сама функция getVideo()
+            //4. сама функция getVideo()
            function getVideo(){
                 $.ajax({
                     url: './models/getVideo.php',
@@ -49,9 +49,12 @@
                     //запуск автоплей  для хрома
                     //$("iframe").attr("allow", "autoplay; encrypted-media");
                     //показывает кол-во лайков на данном видео
-                    $("#likes").html("<font color='white' size='5'>" + ansdata['likes'] +" Laked</font>");
+                    $("#liked").html("<font color='white' size='5'>" + ansdata['likes'] +" Laked</font>");
                     }
                 });
-           }
+            }
+
+            //5. Увеличиваем mylikes +1 и записваем в БД
+            // $("#mylikes").html("<font color='white' size='5'>" + ansdata['likes'] +" Laked</font>");
         });
 
