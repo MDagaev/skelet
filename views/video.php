@@ -14,8 +14,10 @@
 <body>
     <div class="panel">
         <div id="logo">
-            <img src="./images/yshorts.jpg">
+            <div><img src="./images/yshorts.jpg"></div>
+
         </div>
+        <div id="likes"></div>
 
         <div id="tr_hamburger" class="trigger">
             <a href="./admin/index.php?action=add"><img src="./images/hamburger_iconsvg.jpg"></a>

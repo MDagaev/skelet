@@ -48,7 +48,8 @@
                     $("iframe").attr("src", "http://www.youtube.com/embed/" + ansdata['video'] + "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0");
                     //запуск автоплей  для хрома
                     //$("iframe").attr("allow", "autoplay; encrypted-media");
-
+                    //показывает кол-во лайков на данном видео
+                    $("#likes").html("<font color='white' size='5'>" + ansdata['likes'] +" Laked</font>");
                     }
                 });
            }

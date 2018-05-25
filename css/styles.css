@@ -44,6 +44,17 @@ footer {
     border-radius: 5px;
 }
 
+#likes {
+    position: absolute;
+    top: 20px;
+    left: 220px;
+    width: ;
+    height: ;
+    z-index: 10;
+/*    border: 5px black solid;*/
+    border-radius: 5px;
+}
+
 #tr_hamburger {
     position: absolute;
     right: 7px;
@@ -63,7 +74,7 @@ footer {
 }
 
 #nechet {
-    background-color: #fff;
+    background-color: #000;
     display: block;
 }
 
