@@ -17,10 +17,11 @@ function video_get($link, $id_video){
 ////////////////////////////////////////////////////////////////////////////////////
 //берет и вытаскивает 1 видео выбранное случайным образом из базы
 //Данная функция не будет применяться её заменить AJAX запрос к файлу getViodeo.php////////////////
+/*
 function video_getRand($link){
     //Запрос
     $query = "SELECT * FROM video ORDER BY RAND() LIMIT 1";
-    // Заменbnm на более быстрый вариант pfghjcf
+    // Заменить на более быстрый вариант pfghjcf
 
     $result = mysqli_query($link, $query);
 
@@ -31,6 +32,7 @@ function video_getRand($link){
 
     return $video;
 }
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////
 //добавляет новое видео///////////////////////////////////////////////////////////////
@@ -70,5 +72,7 @@ function video_add($link, $video, $datetim, $timezone)
 function video_delete($id){
 
 }
+
+
 
 ?>

@@ -17,11 +17,34 @@
             <div><img src="./images/yshorts.jpg"></div>
 
         </div>
-        <div id="liked"></div>
-        <div id="mylikes"><a href="####2"><font color="white" size="5">+100500</font></a></div>
-        <div id="finger"><a href="####1"><img id="palets" src="./images/like1.jpg"></a></div>
+        <div id="liked" title="Liked people"></div><!--Отображаем Общее кол-во лайков-->
+        <div>
+            <a href="javascript:void(0)" title="My list of likes">
+                <b id="mylikes">
+                    <font color="white" size="5">+100500</font>  <!--Отображаем Мои лайки-->
+                </b>
+            </a>
+        </div>
+
+        <div id="finger">
+            <a href="javascript:void(0)" title="I like">
+                <img id="palets" src="./images/like1.jpg"> <!--Нажимаем на палец увеличиваем +1 лайк -->
+            </a>
+            <ul class="menu">
+                <li class="submenu">Видео1</li>
+                <li class="submenu">Видео2</li>
+                <li class="submenu">Видео3</li>
+                <li class="submenu">Видео4</li>
+                <li class="submenu">Видео5</li>
+                <li class="submenu">Видео6</li>
+                <li class="submenu">Видео7</li>
+                <li class="submenu">Видео8</li>
+                <li class="submenu">Видео9</li>
+            </ul>
+
+        </div>
         <div id="tr_hamburger" class="trigger">
-            <a href="./admin/index.php?action=add"><img src="./images/hamburger_iconsvg.jpg"></a>
+            <a href="./admin/index.php?action=add"><img src="./images/hamburger_iconsvg.jpg" title="Insert video"></a>
         </div>
 
  <!--       <div id="tr_krestik" class="trigger">
@@ -34,12 +57,10 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/DiEPdoOZJKM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
+    <footer><p>copyright &copy; tavintavan<span id="idvideo"></span></p>
 
-
-    <footer><p>copyright &copy; tavintavan</p>
     </footer>
     <script>
-
     </script>
 
 </body>
