@@ -30,7 +30,7 @@
                     //запуск автоплей  для хрома
                     //$("iframe").attr("allow", "autoplay; encrypted-media");
                     //показывает кол-во лайков на данном видео
-                    $("#liked").html("<font color='white' size='5'>" + ansdata['likes'] +" Laked</font>");
+                    $("#liked").html("<font id='font' color='white' size='5'>" + ansdata['likes'] +" Liked</font>");
                     //отображаем id текущ. video в футтере потом сделать его невидимым
                     $("#idvideo").html("<font color='grey' size='1'>" + ansdata['id'] + "</font>");
                     }
@@ -62,12 +62,15 @@
                     }
                 });
 
-/*                //2.вставляем данные в #liked общее кол-во лайков без запроса к БД через js
-                $('#liked').html(function(index, oldhtml{
-                    var newhtml = Number.parseInt(oldhtml) + 1;
-                    return newhtml;
-                                           }));
-*/
+                //2.вставляем данные в #liked общее кол-во лайков без запроса к БД через js
+                var str = $("#font").text(); //берем текст из тега id="font"
+                var shstr = str.substr(0, str.length - 6); //убираем последние 6 символов
+                var intliked = parseInt(shstr, 10);//меняем тип строки в число
+                var liked1 = intliked + 1;
+
+                $("#liked").html("<font id='font' color='white' size='5'>" + liked1 + " Liked</font>")
+
+
                 //3.вставляем данные в сессию мои лайки
 
             });
