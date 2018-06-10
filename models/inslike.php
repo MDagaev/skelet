@@ -11,7 +11,7 @@
     function inslike($link, $like1, $id_video){
        //вставка 1 лайка
 
-        $query = sprintf("UPDATE video SET likes = likes + 1 WHERE id =%d", (int)$id_video);
+        $query = sprintf("UPDATE video SET likes = likes + %d WHERE id =%d", $like1, (int)$id_video);
         $result = mysqli_query($link, $query);
 
         if (!$result)

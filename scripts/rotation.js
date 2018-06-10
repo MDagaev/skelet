@@ -37,15 +37,32 @@
                 });
             }
 
-            //5. Увеличиваем mylikes +1 и записваем в БД
+            //5. Увеличиваем mylikes +1 или -1 и записваем в БД
+ //           var idvideo = + $('#idvideo').text();
+ //           inslike();
 
-//           function inslike(){
-            $('#palets').click(function(){
+
+ //           function inslike(){
+            $('#palets').data('counter', 0).click(function(){
 
                 //1.Подготовка к вставки в Базу Данных
                 var send ={};
                 send['id'] = $('#idvideo').text();
                 send['like1'] = 1;
+/*
+                var counter = - $(this).data('counter');
+                $(this).data('counter', counter +1);
+                var schet = $(this).data('counter');
+
+                if (schet ==1)
+                {
+                    send['like1'] = 1;
+                }
+                else
+                {
+                    send['like1'] = -1;
+                }
+*/
                 //alert(send['like1'] + ", " + send['id']);
 
                 //1.1.Вставка в Базу Данных методом POST через AJAX
@@ -66,13 +83,12 @@
                 var str = $("#font").text(); //берем текст из тега id="font"
                 var shstr = str.substr(0, str.length - 6); //убираем последние 6 символов
                 var intliked = parseInt(shstr, 10);//меняем тип строки в число
-                var liked1 = intliked + 1;
+                var liked1 = intliked + send['like1'];
 
-                $("#liked").html("<font id='font' color='white' size='5'>" + liked1 + " Liked</font>")
-
+                $("#liked").html("<font id='font' color='white' size='5'>" + liked1 + " Liked</font>");
 
                 //3.вставляем данные в сессию мои лайки
-
+                $('#mylikes').text(+$('#mylikes').text()+1);
             });
 //           }
         });
