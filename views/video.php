@@ -15,9 +15,10 @@
     <div class="panel">
         <div id="logo">
             <div><img src="./images/yshorts.jpg"></div>
-
         </div>
         <div id="liked" title="Liked people"></div><!--Отображаем Общее кол-во лайков-->
+        <div id="donate"><a href="http://paypal.me/MatveyDagaev/5USD"><img src="./images/donate4.png"></a></div>
+
         <div id="men">
             <a href="javascript:void(0)" title="My likes">
                 <div>
@@ -26,15 +27,9 @@
             </a>
 
             <ul class="menu">
-                <li class="submenu"><a href="#">Video1</a></li>
-                <li class="submenu"><a href="#">Video2</a></li>
-                <li class="submenu"><a href="#">Video3</a></li>
-                <li class="submenu"><a href="#">Video4</a></li>
-                <li class="submenu"><a href="#">Video5</a></li>
-                <li class="submenu"><a href="#">Video6</a></li>
-                <li class="submenu"><a href="#">Video7</a></li>
-                <li class="submenu"><a href="#">Video8</a></li>
-                <li class="submenu"><a href="#">Video9</a></li>
+                <!--здесь вставляем li через JQuery-->
+<!--               <li class="submenu"><a href="#">Video9</a></li>
+-->
             </ul>
 
         </div>

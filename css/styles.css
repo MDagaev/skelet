@@ -19,7 +19,9 @@ ul{
 
 .menu a:hover {
     background: #666;
+    color: white;
     padding: 10px 0 10px 20px;
+    text-decoration: none;
 }
 
 .menu li:first-child a,
@@ -36,8 +38,8 @@ ul{
 #men{
     position: absolute;
     right: 190px;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 
 
 }
@@ -110,21 +112,27 @@ footer {
     width: ;
     height: ;
     z-index: 10;
-    border: 5px black solid;
+    border: 0px black solid;
     border-radius: 5px;
 }
 
 #liked {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 220px;
     width: ;
     height: ;
     z-index: 10;
 /*    border: 5px black solid;*/
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
+#donate {
+    position: absolute;
+    top: 8px;
+    text-align: center;
+    width: 100%;
+}
 
 
 #mylikes {
@@ -166,7 +174,7 @@ footer {
 #tr_hamburger {
     position: absolute;
     right: 7px;
-    top: 10px;
+    top: 7px;
     border: 1px black solid;
     border-radius: 10px;
     z-index: 10;/* 10 */
@@ -195,7 +203,7 @@ footer {
 
 .video {
     position:relative;
-    padding-bottom: 70%;/*пропорции видео 16:9 */
+    padding-bottom: 71%;*пропорции видео 16:9 */
     padding-top: ;
     height:0;
 }

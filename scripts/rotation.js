@@ -2,7 +2,7 @@
 /*global $*/
 
 //скрипт вытаскивает 1 видео случайным образом из БД без перезагрузки ajax'ом
-        $("document").ready(function(){
+$("document").ready(function(){
             //1. первый вызов функции getVideo()
             //getVideo();
 
@@ -89,7 +89,33 @@
 
                 //3.вставляем данные в сессию мои лайки
                 $('#mylikes').text(+$('#mylikes').text()+1);
+
+
+                //4.вставляем li в строку
+                var mylikes = parseInt($("#mylikes").text(),10);
+                var strsrc = $("iframe").attr("src");
+                var src = strsrc.slice(29, -47);
+
+                if ($(".menu").find("li").length = 0 ){
+                    $(".menu").html('<li class="submenu"><a name="' + src + '" href="javascript:void(0)">Video1</a></li>');//вставить name="код видео"
+                }else{
+                    $(".menu").prepend('<li class="submenu"><a name="' + src + '" href="javascript:void(0)">Video' + (mylikes) + '</a></li>');//вставить name="код видео", вставить номер
+                };
+
+                });
+ //           }
+
+            // При нажатии на строку выпадающего меню запускается выбранное видео
+
+            $('.menu').on('click', '.submenu', function(){ //при клике на строке выпад меню
+                //alert("сработало");
+                //берем атрибут строки выпадающ меню name="src" и вставляем вместо ansdata['video']в строке ниже
+                var namesrc = $(this).attr("name");
+                $("iframe").attr("src", "http://www.youtube.com/embed/" + namesrc + "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0");
+
             });
-//           }
-        });
+
+});
+
+
 
