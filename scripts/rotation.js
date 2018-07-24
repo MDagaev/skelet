@@ -67,15 +67,15 @@ $("document").ready(function(){
 
                 //1.1.Вставка в Базу Данных методом POST через AJAX
                 $.ajax({
-                    url: './models/inslike.php',
+                    url: './models/insLike.php',
                     type: 'POST',
-                    data: send, // отправляет 1 в inslike.php
+                    data: send, // отправляет 1 в insLike.php
                     // подготовка
                     success: function(anslike){
-                        //данные приходят из inslike.php
+                        //данные приходят из insLike.php
                         //alert(anslike);
                         anslike = jQuery.parseJSON(anslike);
-                        //приход данных из inslike.php не реализован. хотя поле likes бд увеличивается на +1
+                        //приход данных из insLike.php не реализован. хотя поле likes бд увеличивается на +1
                     }
                 });
 

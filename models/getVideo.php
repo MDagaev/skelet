@@ -1,26 +1,10 @@
 <?php
-    //Обработчик AJAX
-    //извлекает случайнное видео из БД отдает AJAX запросу
+    //AJAX обработчик извлекает случайнное видео из БД отдает AJAX запросу
     require_once("../database.php");
-
 
     $link = db_connect();
 
-    /*    //медленная выборка
-    function video_getRand($link){
-        //Запрос
-        $query = "SELECT * FROM video ORDER BY RAND() LIMIT 1";
-
-        $result = mysqli_query($link, $query);
-        if (!$result)
-            die(mysqli_error($link));
-
-        $video = mysqli_fetch_assoc($result);
-
-        return $video;
-    }
-    */
-        //быстрая выборка случайного видео
+    //быстрая выборка случайного видео
     function video_getRand2($link){
         //Запрос
         $query = "SELECT id, video, likes FROM video f
@@ -38,5 +22,22 @@
         return $video;
     }
 
-        echo json_encode(video_getRand2($link));
+
+/*  //медленная выборка
+    function video_getRand($link){
+        //Запрос
+        $query = "SELECT * FROM video ORDER BY RAND() LIMIT 1";
+
+        $result = mysqli_query($link, $query);
+        if (!$result)
+            die(mysqli_error($link));
+
+        $video = mysqli_fetch_assoc($result);
+
+        return $video;
+    }
+*/
+
+     echo json_encode(video_getRand2($link));
+
 ?>

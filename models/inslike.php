@@ -1,6 +1,6 @@
 <?php
-     //обработчик AJAX увеличивает на 1 лайк БД в поле likes и возврщает в rotation.js
-    //echo "ответ от скрипт обработчика" . $_POST['id'] . ", " . $_POST['like1'];
+//AJAX оработчик увеличивает на 1 лайк БД в поле likes и возврщает в rotation.js
+//echo "ответ от скрипт обработчика" . $_POST['id'] . ", " . $_POST['like1'];
 
     require_once("../database.php");
     $link = db_connect();
