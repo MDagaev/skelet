@@ -1,5 +1,5 @@
 <?php
-     //обработчик увеличивает на 1 лайк БД в поле likes и возврщает в rotation.js
+     //обработчик AJAX увеличивает на 1 лайк БД в поле likes и возврщает в rotation.js
     //echo "ответ от скрипт обработчика" . $_POST['id'] . ", " . $_POST['like1'];
 
     require_once("../database.php");
@@ -17,12 +17,11 @@
         if (!$result)
             die(mysqli_error($link));
 
-        $anslike = mysqli_fetch_assoc($result); //на этой строке выдает ошибку , UPDATE/SELECT?
+        $anslike = mysqli_fetch_assoc($result);
 
         return $anslike;
     }
 
     echo json_encode(inslike($link, $like1, $id_video));
 
-
-
+?>
