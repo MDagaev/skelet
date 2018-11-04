@@ -216,7 +216,102 @@ footer {
     height:100%;
 }
 
+/* модальное окно */
+.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		display: none;
+		pointer-events: none;
+	}
 
+	.modalDialog:target {
+		display: block;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 400px;
+        height: 250px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
+
+	.close {
+		background: #676061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: 12px;
+		text-align: center;
+		top: 9px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #FFFFFF; /*#00d9ff;*/ }
+/* конец модального окна */
+
+/* вкладки tabs в модальном окне*/
+    .tabs { width: 100%; padding: 0px; margin: 0 auto;
+        margin-top: 5px;
+    }
+    .tabs>input { display:none; }
+    .tabs>div { display: none;
+        padding: 12px;
+        padding-top: 25px;
+        border: 1px solid #C0C0C0;
+        background: #FFFFFF;
+        width: 360px;
+        height: 190px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .tabs>label {
+        display: inline-block;
+        padding: 7px;
+        margin: 0 -5px -1px 0;
+        text-align: center;
+        color: #666666;
+        border: 1px solid #C0C0C0;
+        background: #E0E0E0;
+        cursor: pointer;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+
+    }
+    .tabs>input:checked + label {
+        color: #000000;
+        border: 1px solid #C0C0C0;
+        border-bottom: 1px solid #FFFFFF;
+        background: #FFFFFF;
+    }
+    #tab_1:checked ~ #txt_1,
+    #tab_2:checked ~ #txt_2
+    { display: block; }
+    /* конец вкладки tabs в модальном окне*/
 
 
 

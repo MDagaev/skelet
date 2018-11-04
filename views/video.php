@@ -41,8 +41,9 @@
         </div>
 
         <div id="tr_hamburger" class="trigger">
-            <a href="./admin/index.php?action=add"><img src="./images/hamburger_iconsvg.jpg" title="Insert video"></a>
-       </div>
+<!--            <a href="./admin/index.php?action=add"><img src="./images/hamburger_iconsvg.jpg" title="Insert video"></a> -->
+            <a href="#openModal"><img src="./images/hamburger_iconsvg.jpg" title="Insert video"></a>
+        </div>
 <!--        <div id="tr_krestik" class="trigger">
             <img src="../images/krestik.jpg">
 -->    </div>
@@ -52,11 +53,57 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/zFIWWM0Iv-U?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
-    <footer><p>copyright &copy; tavintavan<span id="idvideo"></span></p>
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
 
-    </footer>
-    <script>
-    </script>
+            <div class="tabs">
+
+            <input type="radio" name="inset" value="" id="tab_1" checked>
+            <label for="tab_1">Paste URL Video</label>
+
+            <input type="radio" name="inset" value="" id="tab_2">
+            <label for="tab_2">Upload Video</label>
+
+
+            <div id="txt_1">
+                <div>
+                    <div class="container">
+                        <h3><font color="">Paste a link to the video</font></h3>
+                        <form>
+                            <label>
+                                <b><font color="">Link to video :</font></b>
+                                <br />
+                                <input type="text" name="video" value="" size="33" class="form-item" autofocus required>
+                                <input type="hidden" name="datetim" value="<?=date('Y-m-d H:i:s')?>">
+                                <input type="hidden" name="timezone" id="tzone"><br />
+                            </label>
+                            <br />
+                            <label>
+                                <input type="submit" name="save" value="Send" class="btn">
+                            </label>
+                            <br />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="txt_2">
+                <div class="container">
+                <h3>Functional temporarily unavailable</h3>
+                </div>
+             </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer><p>copyright &copy; tavintavan<span id="idvideo"></span></p></footer>
+
+    <script src="../scripts/timezone.js"></script>
+
 
 </body>
 </html>

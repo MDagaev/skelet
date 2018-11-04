@@ -38,6 +38,6 @@
     }
 */
 
-     echo json_encode(video_getRand2($link));
+    echo json_encode(video_getRand2($link));
 
 ?>
