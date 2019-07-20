@@ -13,8 +13,12 @@ $(document).ready(function(){
             data: dannie,
             success: function(data){
                 //проверка
+                alert(data);
             }
 
         })
     });
 });
+
+
+//

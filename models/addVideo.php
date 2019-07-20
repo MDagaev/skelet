@@ -1,5 +1,7 @@
 <?php
-    //AJAX обработчик добавляет видео в Базу Данных
+
+echo $_POST['video']. ", " .$_POST['datatim']. ", " .$_POST['timezone'];
+/*    //AJAX обработчик добавляет видео в Базу Данных
     function addVideo($link, $video, $datetim, $timezone)
     {
         //Подготовка
@@ -30,4 +32,5 @@
     }
 
     echo json_encode(addVideo($link, $video, $datetim, $timezone));
+*/
 ?>
