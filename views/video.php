@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="scripts/rotation.js"></script>
+    <script src="scripts/addVideo.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
 </head>
@@ -80,7 +81,7 @@
                             </label>
                             <br />
                             <label>
-                                <input type="submit" name="save" value="Send" class="btn">
+                                <input type="button" name="save" id="send" value="Send" class="btn">
                             </label>
                             <br />
                         </form>
