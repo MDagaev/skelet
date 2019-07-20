@@ -49,20 +49,7 @@ $("document").ready(function(){
                 var send ={};
                 send['id'] = $('#idvideo').text();
                 send['like1'] = 1;
-/*
-                var counter = - $(this).data('counter');
-                $(this).data('counter', counter +1);
-                var schet = $(this).data('counter');
 
-                if (schet ==1)
-                {
-                    send['like1'] = 1;
-                }
-                else
-                {
-                    send['like1'] = -1;
-                }
-*/
                 //alert(send['like1'] + ", " + send['id']);
 
                 //1.1.Вставка в Базу Данных методом POST через AJAX
