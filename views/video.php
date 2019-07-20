@@ -102,7 +102,7 @@
 
     <footer><p>copyright &copy; tavintavan<span id="idvideo"></span></p></footer>
 
-    <script src="../scripts/timezone.js"></script>
+    <script src="scripts/timezone.js"></script>
 
 
 </body>
