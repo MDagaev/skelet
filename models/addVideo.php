@@ -15,7 +15,7 @@ $timezone = $_POST['timezone'];
         //Подготовка
         $video = trim($video);
 
-        $tube = "https://youtu.be/";
+    /*    $tube = "https://youtu.be/";
         $vimeo = "https://vimeo.com/";
 
         //Проверка: если $video пустое значение ИЛИ значение $tube НЕ равно первым 17символам $video
@@ -23,7 +23,7 @@ $timezone = $_POST['timezone'];
             return false;
 
         //$video = substr(trim($video), 17);
-
+*/
         //Запрос
         $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
 
@@ -39,6 +39,6 @@ $timezone = $_POST['timezone'];
         return true;
     }
 
-    echo json_encode(addVideo($link, $video, $datetim, $timezone));
-
+     echo json_encode(addVideo($link, $video, $datetim, $timezone));
+    //addVideo($link, $video, $datetim, $timezone);
 ?>
