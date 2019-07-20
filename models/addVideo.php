@@ -1,7 +1,15 @@
 <?php
 
-echo $_POST['video']. ", " .$_POST['datatim']. ", " .$_POST['timezone'];
-/*    //AJAX обработчик добавляет видео в Базу Данных
+//echo $_POST['video']. ", " .$_POST['datetim']. ", " .$_POST['timezone'];
+
+require_once("../database.php");
+
+$link = db_connect();
+$video = $_POST['video'];
+$datetim = $_POST['datetim'];
+$timezone = $_POST['timezone'];
+
+    //AJAX обработчик добавляет видео в Базу Данных
     function addVideo($link, $video, $datetim, $timezone)
     {
         //Подготовка
@@ -32,5 +40,5 @@ echo $_POST['video']. ", " .$_POST['datatim']. ", " .$_POST['timezone'];
     }
 
     echo json_encode(addVideo($link, $video, $datetim, $timezone));
-*/
+
 ?>

@@ -6,9 +6,8 @@ $(document).ready(function(){
         
         var dannie = $("form").serialize();
 
-        alert(dannie);
-        $.ajax({
-            url: '.models/addVideo.php',
+            $.ajax({
+            url: 'models/addVideo.php',
             type: 'POST',
             data: dannie,
             success: function(data){
@@ -16,7 +15,7 @@ $(document).ready(function(){
                 alert(data);
             }
 
-        })
+        });
     });
 });
 
