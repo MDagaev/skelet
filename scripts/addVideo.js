@@ -7,15 +7,14 @@ $(document).ready(function(){
         var dannie = $("form").serialize();
 
             $.ajax({
-            url: 'models/addVideo.php',
-            type: 'POST',
-            data: dannie,
-            success: function(data){
+              url: "models/addVideo.php",
+              type: "POST",
+              data: dannie,
+              success: function(data) {
                 //проверка
                 alert(data);
-            }
-
-        });
+              }
+            });
     });
 });
 

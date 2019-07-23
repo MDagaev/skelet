@@ -39,6 +39,6 @@ $timezone = $_POST['timezone'];
         return true;
     }
 
-     echo json_encode(addVideo($link, $video, $datetim, $timezone));
-    //addVideo($link, $video, $datetim, $timezone);
+echo json_encode(addVideo($link, $video, $datetim, $timezone));
+//addVideo($link, $video, $datetim, $timezone);
 ?>
