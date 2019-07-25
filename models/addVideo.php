@@ -13,9 +13,9 @@ $timezone = $_POST['timezone'];
     function addVideo($link, $video, $datetim, $timezone)
     {
         //Подготовка
-        $video = trim($video);
+/*        $video = trim($video);
 
-    /*    $tube = "https://youtu.be/";
+        $tube = "https://youtu.be/";
         $vimeo = "https://vimeo.com/";
 
         //Проверка: если $video пустое значение ИЛИ значение $tube НЕ равно первым 17символам $video
@@ -41,4 +41,5 @@ $timezone = $_POST['timezone'];
 
 echo json_encode(addVideo($link, $video, $datetim, $timezone));
 //addVideo($link, $video, $datetim, $timezone);
+
 ?>

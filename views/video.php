@@ -56,7 +56,7 @@
 
     <div id="openModal" class="modalDialog">
         <div>
-            <a href="#close" title="Close" class="close">X</a>
+            <a href="#close" title="Close" class="close" id="close">X</a>
 
             <div class="tabs">
 
@@ -75,7 +75,7 @@
                             <label>
                                 <b><font color="">Link to video :</font></b>
                                 <br />
-                                <input type="text" name="video" value="" size="33" class="form-item" autofocus required>
+                                <input type="text" name="video" id="video" value="" size="33" class="form-item" autofocus required>
                                 <input type="hidden" name="datetim" value="<?=date('Y-m-d H:i:s')?>">
                                 <input type="hidden" name="timezone" id="tzone"><br />
                             </label>
