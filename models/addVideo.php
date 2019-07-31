@@ -1,6 +1,19 @@
 <?php
+/*
+$video = $_POST['video'];
+$tube = "https://youtu.be/";
 
+echo $video;
+echo "\n";
+echo $tube;
+echo "\n";
+echo substr($video, 0, 17);
+if (strcasecmp($tube, substr($video, 0, 18) == 0)){
+    return json_encode(true);
+}
+*/
 //echo $_POST['video']. ", " .$_POST['datetim']. ", " .$_POST['timezone'];
+
 
 require_once("../database.php");
 
@@ -13,30 +26,34 @@ $timezone = $_POST['timezone'];
     function addVideo($link, $video, $datetim, $timezone)
     {
         //Подготовка
-/*        $video = trim($video);
+        $video = trim($video);
 
-        $tube = "https://youtu.be/";
-        $vimeo = "https://vimeo.com/";
+        $tube =  'https://youtu.be/' ;
+        //$vimeo = 'https://vimeo.com/';
 
-        //Проверка: если $video пустое значение ИЛИ значение $tube НЕ равно первым 17символам $video
-        if ($video == '' or $tube !== substr($video, 0, 17) or $vimeo !== substr($video, 0, 18))
-            return false;
+        //Проверка: если $video пустое значение ИЛИ значение $tube НЕ равно первым 17 символам $video
+        if ($video == '' or substr($video, 0, 17) <> $tube /*or $vimeo <> substr($video, 0, 18)*/){
+            
+            return 'Ne proshli validatsiyu';
 
-        //$video = substr(trim($video), 17);
-*/
-        //Запрос
-        $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
+        } else { 
 
-        $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetim), mysqli_real_escape_string($link, $timezone));
+            //$video = substr(trim($video), 18);
 
-        $result = mysqli_query($link, $query);
+            //Запрос
+            $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
 
-        if (!$result)
-        {
-            die (mysqli_error($link));
+            $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetim), mysqli_real_escape_string($link, $timezone));
+
+            $result = mysqli_query($link, $query);
+
+            if (!$result)
+            {
+                die (mysqli_error($link));
+            }
+
+            return 'dannie vstavleny';
         }
-
-        return true;
     }
 
 echo json_encode(addVideo($link, $video, $datetim, $timezone));
