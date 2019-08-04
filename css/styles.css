@@ -40,8 +40,6 @@ ul{
     right: 190px;
     width: 55px;
     height: 55px;
-
-
 }
 
 .menu{
@@ -73,10 +71,6 @@ html {
     background-color: black;
 }
 
-.container{
-
-}
-
 body {
     background-color: black !important;
 }
@@ -88,10 +82,9 @@ footer {
     color:grey;
     z-index: 10;
     position:absolute;
-    bottom: 0;
+    bottom: inherit;
     left: 0;
     right: 0;
-
 }
 
 .panel{
@@ -148,10 +141,6 @@ footer {
     color: white;
 }
 
-
-
-
-
 #finger {
     position: absolute;
     top: 13px;
@@ -164,11 +153,42 @@ footer {
 
 }
 
-#palets {
+.palets {
     width: 42px;
     height: 32px;
     border: 2px black solid;
     border-radius: 7px;
+
+}
+
+/*Поворачивает палец вверх с вращением против часовой стрелки 2 оборота + 180*/
+.paletsUp {
+    width: 42px;
+    height: 32px;
+    border: 2px black solid;
+    border-radius: 7px;
+
+    -moz-transform:    rotate(-1080deg); /* Для Firefox */
+    -ms-transform:     rotate(-1080deg); /* Для IE */
+    -webkit-transform: rotate(-1080deg); /* Для Safari, Chrome, iOS */
+    -o-transform:      rotate(-1080deg); /* Для Opera */
+    transform:         rotate(-1080deg);
+    
+}
+
+/*Поворачивает палец вниз с вращением по часовой стрелки 2 оборота + 180*/
+.paletsDown {
+    width: 42px;
+    height: 32px;
+    border: 2px black solid;
+    border-radius: 7px;
+
+    -moz-transform:    rotate(900deg); /* Для Firefox */
+    -ms-transform:     rotate(900deg); /* Для IE */
+    -webkit-transform: rotate(900deg); /* Для Safari, Chrome, iOS */
+    -o-transform:      rotate(900deg); /* Для Opera */
+    transform:         rotate(900deg);
+    
 }
 
 #tr_hamburger {
@@ -203,7 +223,7 @@ footer {
 
 .video {
     position:relative;
-    padding-bottom: 71%;*пропорции видео 16:9 */
+    padding-bottom: 70%;/*пропорции видео 16:9 */
     padding-top: ;
     height:0;
 }

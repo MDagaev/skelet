@@ -2,7 +2,7 @@
 /*global $*/
 
 //скрипт вытаскивает 1 видео случайным образом из БД без перезагрузки ajax'ом
-$("document").ready(function() {
+$(document).ready(function() {
   //1. первый вызов функции getVideo()
   //getVideo();
 
@@ -16,6 +16,9 @@ $("document").ready(function() {
 
   //4. сама функция getVideo()
   function getVideo() {
+      //вызываем class с текущими настройками CSS
+      $("img[class^='palets']").removeClass().addClass("palets");
+      //вызов Ajax функции
       $.ajax({
       url: "./models/getVideo.php",
       type: "POST",
@@ -41,18 +44,24 @@ $("document").ready(function() {
         $("#idvideo").html(
           "<font color='grey' size='1'>" + ansdata["id"] + "</font>"
         );
+        
+
       }
     });
   }
 
-  //5. Увеличиваем mylikes +1 или -1 и записваем в БД
+/*  //5. Увеличиваем mylikes +1 или -1 и записваем в БД
   //           var idvideo = + $('#idvideo').text();
   //           inslike();
 
   //           function inslike(){
   $("#palets")
-    .data("counter", 0)
+    //.data("counter", 0)
     .click(function() {
+      //0. применяем class палец вниз
+      $(this).removeClass("palets").addClass("paletsDown");
+        
+    
       //1.Подготовка к вставки в Базу Данных
       var send = {};
       send["id"] = $("#idvideo").text();
@@ -107,8 +116,8 @@ $("document").ready(function() {
             "</a></li>"
         ); //вставить name="код видео", вставить номер
       }
-    });
-  //           }
+    }); 
+  //  
 
   // При нажатии на строку выпадающего меню запускается выбранное видео
 
@@ -123,5 +132,5 @@ $("document").ready(function() {
         namesrc +
         "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0"
     );
-  });
+  });*/
 });

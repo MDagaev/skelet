@@ -12,14 +12,14 @@
        //вставка 1 лайка
 
         $query = sprintf("UPDATE video SET likes = likes + %d WHERE id =%d", $like1, (int)$id_video);
-        $result = mysqli_query($link, $query);
+        $result = mysqli_query($link, $query) or die("ERROR: ".mysql_error());
 
         if (!$result)
             die(mysqli_error($link));
 
-        $anslike = mysqli_fetch_assoc($result);
+        //$anslike = mysqli_fetch_assoc($result);
 
-        return $anslike;
+        //return $anslike;
     }
 
     echo json_encode(inslike($link, $like1, $id_video));

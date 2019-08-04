@@ -7,8 +7,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="scripts/rotation.js"></script>
+    <script src="scripts/getVideoRot.js"></script>
     <script src="scripts/addVideo.js"></script>
+    <script src="scripts/insLike.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
 </head>
@@ -21,7 +22,7 @@
         <div id="donate"><a href="http://paypal.me/MatveyDagaev/5USD"><img src="./images/donate4.png"></a></div>
 
         <div id="men">
-            <a href="javascript:void(0)" title="My likes">
+            <a href="#" title="My likes">
                 <div>
                     <font id="mylikes" color="white" size="5">0</font><!--Отображаем Мои лайки-->
                 </div>
@@ -35,9 +36,9 @@
 
         </div>
 
-        <div id="finger">
-            <a href="javascript:void(0)" title="I like">
-                <img id="palets" src="./images/like1.jpg"> <!--Нажимаем на палец увеличиваем +1 лайк -->
+        <div id="finger" >
+            <a  id="link_img" href="#" title="I like">
+                <img  src="./images/like1.jpg" class="palets"> <!--Нажимаем на палец увеличиваем +1 лайк -->
             </a>
         </div>
 
