@@ -29,6 +29,7 @@ $(document).ready(function(){
                 //$("#openModal").css('display', 'none'); //исчезает на совсем
                 //alert(data);
                 console.log(data);
+                $('#otvet_srv').text(data);
               }
             });
     });

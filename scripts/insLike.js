@@ -7,8 +7,9 @@ $(document).ready(function(){
      //1.Подготовка к вставки в Базу Данных
     var send = {};
     send["id"] = $("#idvideo").text();
-    //send["like1"] = 1;
-    let klik = 0; //счетчик для подсчета только положительных/нечетных кликов по пальцу
+    let klik = 0; //счетчик для подсчета только положительных лайков дзлайки не считаются
+    //нечетных кликов по пальцу
+    
     //1.1. поворот пальца (смена класса стилей) 
     if ($("img.palets").hasClass("palets"))
     {
@@ -62,7 +63,8 @@ $(document).ready(function(){
      );
 
     console.log(liked1); 
-    //3.вставляем данные в сессию "мои лайки"
+
+    //3.вставляем данные "мои лайки"
     $("#mylikes").text(+$("#mylikes").text() + klik);
 
     //4.вставляем li в строку
@@ -103,4 +105,5 @@ $(document).ready(function(){
         "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0"
     );
   });
+
 });
