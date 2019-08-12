@@ -34,7 +34,7 @@ $timezone = $_POST['timezone'];
         //Проверка: если $video пустое значение ИЛИ значение $tube НЕ равно первым 17 символам $video
         if ($video == '' or substr($video, 0, 17) <> $tube /*or $vimeo <> substr($video, 0, 18)*/){
             
-            return 'Ne proshli validatsiyu';
+            return 'Video failed validation';
 
         } else { 
 
@@ -52,7 +52,7 @@ $timezone = $_POST['timezone'];
                 die (mysqli_error($link));
             }
 
-            return 'dannie vstavleny';
+            return 'Ok, video uploaded';
         }
     }
 
