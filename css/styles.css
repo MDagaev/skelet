@@ -179,256 +179,240 @@ footer {
 
 /* модальное окно */
 .modalDialog {
-		position: fixed;
-		font-family: Arial, Helvetica, sans-serif;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: rgba(0,0,0,0.5);
-		z-index: 99999;
-		-webkit-transition: opacity 900ms ease-in;
-		-moz-transition: opacity 900ms ease-in;
-		transition: opacity 900ms ease-in;
-		display: none;
-		pointer-events: none;
-	}
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 99999;
+    -webkit-transition: opacity 900ms ease-in;
+    -moz-transition: opacity 900ms ease-in;
+    transition: opacity 900ms ease-in;
+    display: none;
+    pointer-events: none;
+}
 
-	.modalDialog:target {
-		display: block;
-		pointer-events: auto;
-	}
+.modalDialog:target {
+    display: block;
+    pointer-events: auto;
+}
 
-	.modalDialog > div {
-		width: 400px;
-        height: 250px;
-		position: relative;
-		margin: 10% auto;
-		padding: 5px 20px 13px 20px;
-		border-radius: 10px;
-		background: #fff;
-		background: -moz-linear-gradient(#fff, #999);
-		background: -webkit-linear-gradient(#fff, #999);
-		background: -o-linear-gradient(#fff, #999);
-	}
+.modalDialog > div {
+    width: 400px;
+    height: 250px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
 
-	.close {
-		background: #676061;
-		color: #FFFFFF;
-		line-height: 25px;
-		position: absolute;
-		right: 12px;
-		text-align: center;
-		top: 9px;
-		width: 24px;
-		text-decoration: none;
-		font-weight: bold;
-		-webkit-border-radius: 12px;
-		-moz-border-radius: 12px;
-		border-radius: 12px;
-		-moz-box-shadow: 1px 1px 3px #000;
-		-webkit-box-shadow: 1px 1px 3px #000;
-		box-shadow: 1px 1px 3px #000;
-	}
+.close {
+    background: #676061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: 12px;
+    text-align: center;
+    top: 9px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
 
-	.close:hover { background: #FFFFFF; /*#00d9ff;*/ }
+.close:hover { background: #FFFFFF; /*#00d9ff;*/ }
 /* конец модального окна */
 
 /* вкладки tabs в модальном окне*/
-    .tabs { width: 100%; padding: 0px; margin: 0 auto;
-        margin-top: 5px;
-    }
-    .tabs>input { display:none; }
-    .tabs>div { display: none;
-        padding: 12px;
-        padding-top: 25px;
-        border: 1px solid #C0C0C0;
-        background: #FFFFFF;
-        width: 360px;
-        height: 190px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-    .tabs>label {
-        display: inline-block;
-        padding: 7px;
-        margin: 0 -5px -1px 0;
-        text-align: center;
-        color: #666666;
-        border: 1px solid #C0C0C0;
-        background: #E0E0E0;
-        cursor: pointer;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
+.tabs { width: 100%; padding: 0px; margin: 0 auto;
+    margin-top: 5px;
+}
+.tabs>input { display:none; }
+.tabs>div { display: none;
+    padding: 12px;
+    padding-top: 25px;
+    border: 1px solid #C0C0C0;
+    background: #FFFFFF;
+    width: 360px;
+    height: 190px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.tabs>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #666666;
+    border: 1px solid #C0C0C0;
+    background: #E0E0E0;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 
-    }
-    .tabs>input:checked + label {
-        color: #000000;
-        border: 1px solid #C0C0C0;
-        border-bottom: 1px solid #FFFFFF;
-        background: #FFFFFF;
-    }
-    #tab_1:checked ~ #txt_1,
-    #tab_2:checked ~ #txt_2
-    { display: block; }
-    /* конец вкладки tabs в модальном окне*/
+}
+.tabs>input:checked + label {
+    color: #000000;
+    border: 1px solid #C0C0C0;
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2
+{ display: block; }
+/* конец вкладки tabs в модальном окне*/
 
-    /*боковой выдвигающийся сайдбар*/
-    /*кнопка для выдвигающегося сайдбара*/
-    a.btn_click {
-        top: 44.5%; /*расстояние сверху*/
-        width: 70px; /*ширина*/
-        height: 47px; /* высота*/
-        background-color: #ff0808; /*цвет*/
+/*боковой выдвигающийся сайдбар*/
+/*кнопка для выдвигающегося сайдбара*/
+a.btn_click {
+    top: 44.5%; /*расстояние сверху*/
+    width: 70px; /*ширина*/
+    height: 47px; /* высота*/
+    background-color: #ff0808; /*цвет*/
 
-        z-index: 100;
-        position: fixed; /*позиционирование*/
-        right: 15px;
-        border-radius: 15px;
-    }
+    z-index: 100;
+    position: fixed; /*позиционирование*/
+    right: 15px;
+    border-radius: 15px;
+}
     
-    img.icon {
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        border: #302f2f;
-    }
+img.icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: #302f2f;
+}
 
-    .btn_click:hover{
-        background-color: #302f2f;
-    }
+.btn_click:hover{
+    background-color: #302f2f;
+}
     
-    /*иконка для кнопки*/
+/*иконка для кнопки*/
 /*    .btn_click::after{
-        content: "   ";
-        position: absolute;
-        border: 15px solid;
-        border-color: transparent transparent transparent #eee;
-        top: 0.6em;
-        right: 0.6em;
-        transition: 0.3s
-    }
-    
-    .btn_click:hover::after{
-        transform-origin: 20% 50%;
-        transform: scaleX(-1);
-    }
-    /*конец иконки для кнопки*/
-*/    /*конец кнопки*/
+    content: "   ";
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent transparent transparent #eee;
+    top: 0.6em;
+    right: 0.6em;
+    transition: 0.3s
+}
 
-    /*собствено сам сайдбар скрытый*/
-    .hidden_sidebar {
-        top: 65px;
-        width: 40%;
-    /*    height: ;*/
-        bottom: 65px;
-        right: -40%;
-        background-color: rgba(0, 0, 0, 0.4);
-        z-index: 20;
-        position: fixed;
-        border-radius: 15px;
-    -webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+.btn_click:hover::after{
+    transform-origin: 20% 50%;
+    transform: scaleX(-1);
+}
+/*конец иконки для кнопки*/
+    /*конец кнопки*/
 
-    -webkit-border-radius: 15px 15px 15px 15px; /* закругление границ для всех браузеров*/
-    -moz-border-radius: 15px 15px 15px 15px;
-    
-    }
-    /*сайдбар*/
-    .sidebar {
-        top: 65px;
-        width: 40%;
-    /*    height: ;*/
-        bottom: 65px;
-        right: 0;
-        background-color: rgba(250, 250, 250, 0.767);
-        z-index: 20;
-        position: fixed;
-        border-radius: 15px;
-    -webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+/*собствено сам сайдбар скрытый*/
+.hidden_sidebar {
+    top: 65px;
+    width: 40%;
+/*    height: ;*/
+    bottom: 65px;
+    right: -40%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    position: fixed;
+    border-radius: 15px;
+-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
 
-    -webkit-border-radius: 15px 15px 15px 15px; /* закругление границ для всех браузеров*/
-    -moz-border-radius: 15px 15px 15px 15px;
-    
-    }
-    /*конец сайдбара*/
+-webkit-border-radius: 15px 15px 15px 15px; /* закругление границ для всех браузеров*/
+-moz-border-radius: 15px 15px 15px 15px;
 
-    /*счетчик посетителей counter visitiors, views, visits*/
-    .counter{
-        font-size: 200%;
-    }
+}
+/*сайдбар*/
+.sidebar {
+    top: 65px;
+    width: 40%;
+/*    height: ;*/
+    bottom: 65px;
+    right: 0;
+    background-color: rgba(250, 250, 250, 0.767);
+    z-index: 20;
+    position: fixed;
+    border-radius: 15px;
+-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+-moz-transition-duration: 0.3s;
+-o-transition-duration: 0.3s;
+transition-duration: 0.3s;
 
-    /*конец счетчика посетителей*/
+-webkit-border-radius: 15px 15px 15px 15px; /* закругление границ для всех браузеров*/
+-moz-border-radius: 15px 15px 15px 15px;
 
-    /*выпадающее меню*/
-/*    ul{
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-*/    
-    .menu a{
-        background: #000;
-        color: #fff;
-        padding: 10px;
-        display: block;
-        border-bottom: 1px solid #666;
-        transition: 0.5s all;
-    }
-    
-    .menu a:hover {
-        background: #666;
-        color: white;
-        padding: 10px 0 10px 20px;
-        text-decoration: none;
-    }
-    
-    .menu li:first-child a,
-    .menu li .submenu li:first-child a{
-        border-radius: 3px 3px 0 0;
-    }
-    
-    .menu li:last-child a,
-    .menu li .submenu li:last-child a{
-        border-radius: 0 0 3px 3px;
-        border-bottom: 0;
-    }
-    
-    #men{
-        position: absolute;
-        right: 190px;
-        width: 55px;
-        height: 55px;
-    
-    
-    }
-    
-    .menu{
-        position: absolute;
-        width: 80px;
-        
-        top: 60px;
-    }
-    
-    
-    .submenu{
-        position: relative;
-        top: -9999em;
-        transition: 0.5s opacity;
-    }
-    
-    
-    
-    #men:hover .submenu{
-        opacity: 1;
-        top: 0;
-    }
-    
-    /*конец выпадающего меню*/
+}
+/*конец сайдбара*/
 
+/*счетчик посетителей counter visitiors, views, visits*/
+.counter{
+    font-size: 200%;
+}
+
+/*конец счетчика посетителей*/
+
+ 
+#men{
+    position: absolute;
+    right: 190px;
+    width: 55px;
+    height: 55px;
+}
+    
+   
+    
+
+/*Комментарии*/
+
+.comments {
+    
+    position: absolute;
+    top: 5px;
+/*    width: 98%;*/
+/*    height: ;*/
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    border-radius: 15px;
+    padding: 1%;
+}
+
+h5 {
+    
+    position: absolute;
+    left: 10%;
+    top: 1%
+}
+
+.add_comment{
+    position: absolute;
+    left: 10%;
+    top: 4%;
+
+}
+
+#id_nickname, #id_comment {
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.ten_comments{
+
+}
+/*конец комментарий/

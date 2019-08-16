@@ -12,6 +12,7 @@
     <script src="scripts/addVideo.js"></script>
     <script src="scripts/insLike.js"></script>
     <script src="scripts/sidebar.js"></script>
+    <script src="scripts/addComment.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
         integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
@@ -64,8 +65,7 @@
     <div id="nechet" class="video">
         <iframe width="560" height="315"
             src="https://www.youtube.com/embed/zFIWWM0Iv-U?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
+            allow="autoplay; encrypted-media" allowfullscreen>
         </iframe>
     </div>
 
@@ -88,7 +88,7 @@
                         <h3>
                             <font id="otvet_srv" color="">Paste a link to the video</font>
                         </h3>
-                        <form>
+                        <form id="form_addvideo">
                             <label>
                                 <b>
                                     <font color="">Link to video :</font>
@@ -120,14 +120,39 @@
     </div>
 
     <a href="#" class="btn_click">
-        <img src="./images/yshorts1.jpg" class="icon"> 
+        <img src="./images/yshorts1.jpg" class="icon">
     </a>
 
     <div class="hidden_sidebar">
         <!--сайдбар для комментариев -->
-        <!--комментарий FB  доработать-->
-        <!-- отказался от комментариев Fb проше свои сделать -->
-        <!-- коментарий окончен -->
+        <div class="comments">
+            <!--бокс для комментариев-->
+            <h5>0: Comments</h5>
+            <div class="add_comment">
+                <!--форма ввода комментариев-->
+                <form id="form_comment">
+                    <label>
+                        <input type="text" name="nickname" id="id_nickname" value="" size="20" class="form-item"
+                            autofocus required maxlength="20" placeholder="Your nickname">
+
+                        <textarea name="comment" id="id_comment" value="" cols="55" row="2" class="form-item"
+                            placeholder="Describe your delight" maxlength="140"></textarea>
+                    </label>
+                    <label>
+                        <input type="button" name="save_comment" id="send_comment" value="Send" class="btn">
+                    </label>
+
+                </form>
+            </div>
+            <!--форма ввода окончена-->
+
+            <div class="ten_comments">
+                <!--10 последних комментов-->
+
+            </div>
+        </div>
+        <!--бокс комментов окончен-->
+        <!-- сайдбар окончен -->
     </div>
 
 

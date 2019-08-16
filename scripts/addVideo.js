@@ -14,7 +14,7 @@ $(document).ready(function(){
     //Функция добавления видео
     $("#send").click(function() {
         
-        var dannie = $("form").serializeArray();
+        var dannie = $("#form_addvideo").serializeArray();
             //console.log(dannie); //отправляет данные с кракозяблами
             //alert(dannie);
             $.ajax({
