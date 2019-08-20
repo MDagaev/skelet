@@ -389,7 +389,7 @@ transition-duration: 0.3s;
     bottom: 5px;
     right: 5px;
     left: 5px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(250, 255, 255, 0.4);
     z-index: 20;
     border-radius: 15px;
     padding: 1%;

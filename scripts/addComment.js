@@ -18,7 +18,7 @@ $("document").ready(function(){
                 $("#id_nickname").val("");
                 $("#id_comment").val("");
 
-                alert(ansdata);
+                //alert(ansdata);
             }
         });
 
