@@ -382,8 +382,9 @@ transition-duration: 0.3s;
 .comments {
     
     position: absolute;
+    overflow: auto;
     top: 5px;
-/*    width: 98%;*/
+    width: 98%;
 /*    height: ;*/
     bottom: 5px;
     right: 5px;
@@ -392,6 +393,11 @@ transition-duration: 0.3s;
     z-index: 20;
     border-radius: 15px;
     padding: 1%;
+}
+
+.form_item {
+    position: absolute;
+    width: 90%;
 }
 
 h5 {
@@ -403,7 +409,9 @@ h5 {
 
 .add_comment{
     position: absolute;
+    width: 10%;
     left: 10%;
+    right: 10%;
     top: 4%;
 
 }
@@ -412,7 +420,12 @@ h5 {
     border-radius: 5px;
     margin-top: 5px;
 }
-.ten_comments{
 
+.ten_comments{
+    position: absolute;
+    overflow: auto;
+    top: 25%;
+    left: 5%;
+    right: 5%;
 }
 /*конец комментарий/

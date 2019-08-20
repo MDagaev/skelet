@@ -13,6 +13,8 @@
     <script src="scripts/insLike.js"></script>
     <script src="scripts/sidebar.js"></script>
     <script src="scripts/addComment.js"></script>
+    <script src="scripts/getTenComments.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
         integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 
@@ -119,7 +121,7 @@
         </div>
     </div>
 
-    <a href="#" class="btn_click">
+    <a id="btn_comments" href="#" class="btn_click">
         <img src="./images/yshorts1.jpg" class="icon">
     </a>
 
@@ -127,7 +129,7 @@
         <!--сайдбар для комментариев -->
         <div class="comments">
             <!--бокс для комментариев-->
-            <h5>0: Comments</h5>
+            <h5 ><b id="totalComments" >0:</b> Comments</h5>
             <div class="add_comment">
                 <!--форма ввода комментариев-->
                 <form id="form_comment">
@@ -148,7 +150,7 @@
 
             <div class="ten_comments">
                 <!--10 последних комментов-->
-
+                <div class="one_comment"></div>
             </div>
         </div>
         <!--бокс комментов окончен-->
