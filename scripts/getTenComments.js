@@ -35,8 +35,7 @@ $(document).ready(function(){
                         });
 
                         //вставляем номер последнего коммента (итого комментов)
-                        
-                        $("#totalComments").html("<b>" + "должно быть общее число комментов" + "</b>")
+                        $("#totalComments").html("<span>" + Math.max.apply(Math, ids) + " :</span>")
                     }    
                 });
             }

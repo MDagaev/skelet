@@ -275,17 +275,19 @@ footer {
 /* конец вкладки tabs в модальном окне*/
 
 /*боковой выдвигающийся сайдбар*/
+
 /*кнопка для выдвигающегося сайдбара*/
 a.btn_click {
     top: 44.5%; /*расстояние сверху*/
     width: 70px; /*ширина*/
     height: 47px; /* высота*/
-    background-color: #ff0808; /*цвет*/
+/*    background-color: #ff0808; /*цвет*/
 
     z-index: 100;
     position: fixed; /*позиционирование*/
     right: 15px;
     border-radius: 15px;
+    transition: 0.5s;
 }
     
 img.icon {
@@ -297,25 +299,10 @@ img.icon {
 
 .btn_click:hover{
     background-color: #302f2f;
-}
-    
-/*иконка для кнопки*/
-/*    .btn_click::after{
-    content: "   ";
-    position: absolute;
-    border: 15px solid;
-    border-color: transparent transparent transparent #eee;
-    top: 0.6em;
-    right: 0.6em;
-    transition: 0.3s
-}
-
-.btn_click:hover::after{
-    transform-origin: 20% 50%;
     transform: scaleX(-1);
 }
-/*конец иконки для кнопки*/
-    /*конец кнопки*/
+
+/*конец кнопки*/
 
 /*собствено сам сайдбар скрытый*/
 .hidden_sidebar {
