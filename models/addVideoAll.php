@@ -29,42 +29,38 @@ $timezone = $_POST['timezone'];
         $youku1 = 'http://youku.com/';
 
         $videoMassiv = array($tube, $tube1, $vimeo, $vimeo1, $daily, $daily1, $rutube, $nico, $nico1, $youku, $youku1);
-        
-        foreach ($videoMassiv as $value) { 
-            if (strpos ($video, $value) !== false) { 
-                $value = $GLOBALS ["value"]; 
-                unset($value);
-            } else {
-                $value = 1;
-            }
-        }
-
-
+ 
         //Проверка: если $video пустое значение 
         if ($video == '') {
         
             return 'Video failed validation';
 
-        //Проварка: если $value пустое значение (нет совпадений)
-        } elseif ($value == 1) {
+        //Проверка: на совпадение
+        } elseif (is_array($videoMassiv)) {
+
+            foreach ($videoMassiv as $value) {
+
+                if (strpos($video, $value) !== false) {
+
+                    
+                    //Запрос
+                    $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
+
+                    $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetim), mysqli_real_escape_string($link, $timezone));
+
+                    $result = mysqli_query($link, $query);
+
+                    if (!$result)
+                    {
+                        die (mysqli_error($link));
+                    }
+
+                    return 'Ok, video uploaded';
+                }
+            }
             
             return 'Video failed validation';
         
-        } else { 
-
-            //Запрос
-            $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
-
-            $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetim), mysqli_real_escape_string($link, $timezone));
-
-            $result = mysqli_query($link, $query);
-
-            if (!$result)
-            {
-                die (mysqli_error($link));
-            }
-
-            return 'Ok, video uploaded';
         }
     }
 

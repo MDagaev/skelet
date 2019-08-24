@@ -137,7 +137,7 @@
                         <input type="text" name="nickname" id="id_nickname" value="" size="20" class="form-item"
                             autofocus required maxlength="20" placeholder="Your nickname">
 
-                        <textarea name="comment" id="id_comment" value="" cols="55" row="2" class="form-item"
+                        <textarea name="comment" id="id_comment" value="" cols="45" row="2" class="form-item"
                             placeholder="Describe your delight" maxlength="140"></textarea>
                     </label>
                     <label>

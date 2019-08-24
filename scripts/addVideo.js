@@ -4,6 +4,7 @@ $(document).ready(function(){
     //Функция открытия openModal при клике tr_gamburger
     $("#tr_hamburger").click(function(){
       $("#openModal").css('display', 'block');
+      $('#otvet_srv').text("Paste a link to the video");
     });  
 
     //функция зыкрытие openModal при клике close
@@ -18,7 +19,7 @@ $(document).ready(function(){
             //console.log(dannie); //отправляет данные с кракозяблами
             //alert(dannie);
             $.ajax({
-              url: "models/addVideo.php",
+              url: "models/addVideoAll.php",
               type: "POST",
               data: dannie,
               success: function(data) {
