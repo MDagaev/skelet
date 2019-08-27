@@ -46,16 +46,18 @@ $(document).ready(function () {
                         "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0";
                         break;
 
-                    case tub1 + urlDB.substr(24):  //24
+                    case tube1 + urlDB.substr(24):  //24
                         
-                        srcDB = "http://www.youtube.com/embed/" + urlDB.substr(24, 18) +
+                        srcDB = "http://www.youtube.com/embed/" + urlDB.substr(32) +
                         "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0";
+                        console.log(srcDB);
+                        
                         break;
 
                     case vimeo + urlDB.substr(18): //18   
                         
                         srcDB = "https://player.vimeo.com/video/" + urlDB.substr(18) + 
-                        "?title=0&byline=0&portrait=0";
+                        "?autoplay=1";
                         break;
 
                     case dai + urlDB.substr(15): // 15
@@ -66,13 +68,13 @@ $(document).ready(function () {
 
                     case dai1 + urlDB.substr(28): // 28
                         
-                        srcDB = "https://www.dailymotion.com/embed/video/" + urlDB.substr(28) + 
+                        srcDB = "https://www.dailymotion.com/embed/video/" + urlDB.substr(34) + 
                         "?autoPlay=1";
                         break;
 
                     case youku + urlDB.substr(20): // 20
                             
-                        srcDB = "http://player.youku.com/embed/" + urlDB.substr(20, 27) +
+                        srcDB = "http://player.youku.com/embed/" + urlDB.substr(27) +
                         "?autoPlay=1";
                         break;
 
