@@ -382,6 +382,7 @@ transition-duration: 0.3s;
     padding: 1%;
 }
 
+
 .form_item {
     position: absolute;
     width: 90%;
@@ -389,13 +390,13 @@ transition-duration: 0.3s;
 
 h5 {
     
-    position: absolute;
+    position: absolute; /*static;/*absolute;*/
     left: 10%;
     top: 1%
 }
 
 .add_comment{
-    position: absolute;
+    position: absolute; /*static;/*absolute*/
     width: 10%;
     left: 10%;
     right: 10%;
@@ -409,7 +410,7 @@ h5 {
 }
 
 .ten_comments{
-    position: absolute;
+    position: absolute;/*static; /*absolut*/
     overflow: auto;
     top: 25%;
     left: 5%;

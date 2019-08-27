@@ -1,19 +1,7 @@
 <?php
-/*
-$video = $_POST['video'];
-$tube = "https://youtu.be/";
+//Вставка URL видео только от youtube
 
-echo $video;
-echo "\n";
-echo $tube;
-echo "\n";
-echo substr($video, 0, 17);
-if (strcasecmp($tube, substr($video, 0, 18) == 0)){
-    return json_encode(true);
-}
-*/
 //echo $_POST['video']. ", " .$_POST['datetim']. ", " .$_POST['timezone'];
-
 
 require_once("../database.php");
 

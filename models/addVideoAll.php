@@ -1,6 +1,5 @@
 <?php
-//
-
+//Вставка URL видео от разных видео хостеров
 require_once("../database.php");
 
 $link = db_connect();
@@ -17,16 +16,16 @@ $timezone = $_POST['timezone'];
 
         // Домены с которых можно вставлять URL 
         $tube =  'https://youtu.be/' ;
-        $tube1 = 'https://youtube.com/';
+        $tube1 = 'https://www.youtube.com/';
         $vimeo = 'https://vimeo.com/';
         $vimeo1 = 'https://player.vimeo.com/';
         $daily = 'https://dai.ly/';
-        $daily1 = 'https://dailymotion.com';
+        $daily1 = 'https://www.dailymotion.com';
         $rutube = 'https://rutube.ru/';
-        $nico = 'https://embed.nicovideo.jp/';
-        $nico1 = 'https://nicovideo.jp/';
-        $youku = 'http://player.youku.com/';
-        $youku1 = 'http://youku.com/';
+        $nico = 'https://nico.ms/';
+        $nico1 = 'https://www.nicovideo.jp/';
+        $youku = 'https://player.youku.com/';
+        $youku1 = 'https://v.youku.com/';
 
         $videoMassiv = array($tube, $tube1, $vimeo, $vimeo1, $daily, $daily1, $rutube, $nico, $nico1, $youku, $youku1);
  

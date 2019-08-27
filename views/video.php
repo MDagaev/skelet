@@ -8,8 +8,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script src="scripts/getVideoRot.js"></script>
-    <script src="scripts/addVideo.js"></script>
+    <script src="scripts/getVideoRotAll.js"></script>
+    <script src="scripts/addVideoAll.js"></script>
     <script src="scripts/insLike.js"></script>
     <script src="scripts/sidebar.js"></script>
     <script src="scripts/addComment.js"></script>
@@ -130,6 +130,7 @@
         <div class="comments">
             <!--бокс для комментариев-->
             <h5 ><b id="totalComments" >0:</b> Comments</h5>
+            
             <div class="add_comment">
                 <!--форма ввода комментариев-->
                 <form id="form_comment">
