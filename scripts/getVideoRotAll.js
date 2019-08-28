@@ -74,8 +74,8 @@ $(document).ready(function () {
 
                     case youku + urlDB.substr(20): // 20
                             
-                        srcDB = "http://player.youku.com/embed/" + urlDB.substr(27) +
-                        "?autoPlay=1";
+                        srcDB = "http://player.youku.com/embed/" + urlDB.substr(30) +
+                        "?autoplay=1";
                         break;
                     case rutube +urlDB.substr(18):
 
