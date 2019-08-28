@@ -77,6 +77,9 @@ $(document).ready(function () {
                         srcDB = "http://player.youku.com/embed/" + urlDB.substr(27) +
                         "?autoPlay=1";
                         break;
+                    case rutube +urlDB.substr(18):
+
+                        srcDB = "https://rutube.ru/play/embed/" +urlDB.substr(23) + "?autoStart=true"
 
                     
                 
