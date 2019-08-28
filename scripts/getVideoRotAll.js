@@ -33,10 +33,11 @@ $(document).ready(function () {
                 let dai = "https://dai.ly/";
                 let dai1 = "https://www.dailymotion.com/";
                 let youku = "https://v.youku.com/";
+                let rutube = "https://rutube.ru/";
 
                 let nico = "https://nico.ms/";
                 let nico1 = "https://www.nicovideo.jp/";
-                let rutube = "https://rutube.ru/";  
+                  
 
 
                 switch (urlDB) {
@@ -77,11 +78,14 @@ $(document).ready(function () {
                         srcDB = "http://player.youku.com/embed/" + urlDB.substr(30) +
                         "?autoplay=1";
                         break;
-                    case rutube +urlDB.substr(18):
+                    case rutube + urlDB.substr(18):
 
-                        srcDB = "https://rutube.ru/play/embed/" +urlDB.substr(23) + "?autoStart=true"
-
+                        srcDB = "https://rutube.ru/play/embed/" + urlDB.substr(23) + "?autoStart=true"
                     
+                    case 
+                        nico + urlDB.substr(16): //17
+
+                        srcDB = "https://embed.nicovideo.jp/watch/" + urlDB.substr(16) + "?ap=1"
                 
                     //default:
                     //    break;
