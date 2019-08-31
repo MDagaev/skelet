@@ -150,6 +150,11 @@ footer {
     border: 1px black solid;
     border-radius: 10px;
     z-index: 10;/* 10 */
+    transition: 0.3s;
+}
+
+#tr_hamburger:hover {
+    transform: scaleX(-1);
 }
 
 #tr_krestik {
