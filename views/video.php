@@ -160,7 +160,7 @@
 
 
     <footer>
-        <span class="counter">visitors: views: visits: </span>
+        <span class="counter">visitors: visits: views:  </span>
         <p>copyright &copy; tavintavan<span id="idvideo"></span></p>
     </footer>
 
