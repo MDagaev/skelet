@@ -43,13 +43,13 @@ $(document).ready(function () {
                 switch (urlDB) {
                     case tube + urlDB.substr(17): //17
 
-                        srcDB = "http://www.youtube.com/embed/" + urlDB.substr(17) +
+                        srcDB = "https://www.youtube.com/embed/" + urlDB.substr(17) +
                         "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0";
                         break;
 
                     case tube1 + urlDB.substr(24):  //24
                         
-                        srcDB = "http://www.youtube.com/embed/" + urlDB.substr(32) +
+                        srcDB = "https://www.youtube.com/embed/" + urlDB.substr(32) +
                         "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0";
                         console.log(srcDB);
                         
@@ -75,7 +75,7 @@ $(document).ready(function () {
 
                     case youku + urlDB.substr(20): // 20
                             
-                        srcDB = "http://player.youku.com/embed/" + urlDB.substr(30) +
+                        srcDB = "https://player.youku.com/embed/" + urlDB.substr(30) +
                         "?autoplay=1";
                         break;
                     case rutube + urlDB.substr(18):
