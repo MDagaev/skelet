@@ -91,17 +91,20 @@ $(document).ready(function () {
                     //    break;
                 }
 
-
+/*
                 $("iframe").attr(
                     "src", srcDB
                 );
-
-                //замена атрибута scr во фрейме
-                /*        $("iframe").attr(
-                          "src", "http://www.youtube.com/embed/" + ansdata.video.substr(17) +
-                          "?rel=0&amp;autoplay=1;controls=0&amp;showinfo=0"
-                        );
-                */
+*/                    
+                $("iframe").attr({
+                    "src": srcDB,
+                    "allowfullscreen": "allowfullscreen",
+                    "mozallowfullscreen": "mozallowfullscreen", 
+                    "msallowfullscreen": "msallowfullscreen", 
+                    "oallowfullscreen": "oallowfullscreen", 
+                    "webkitallowfullscreen": "webkitallowfullscreen",
+                });
+                
                 //показывает кол-во лайков на данном видео
                 $("#liked").html(
                     "<font id='font' color='white' size='5'>" +
