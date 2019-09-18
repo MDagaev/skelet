@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Yshorts</title>
     <link href="./css/styles.css" type="text/css" rel="stylesheet">
+    <link href="./images/yshorts2.png" type="image/png" rel="shortcut icon">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -17,7 +18,7 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
         integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
+        
 </head>
 
 <body>
