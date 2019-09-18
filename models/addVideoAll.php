@@ -43,7 +43,7 @@ $timezone = $_POST['timezone'];
 
                     
                     //Запрос
-                    $t = "INSERT INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
+                    $t = "INSERT IGNORE INTO video (video, datetim, timezone) VALUES ('%s', '%s', '%s')";
 
                     $query = sprintf($t, mysqli_real_escape_string($link, $video), mysqli_real_escape_string($link, $datetim), mysqli_real_escape_string($link, $timezone));
 

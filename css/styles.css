@@ -173,7 +173,7 @@ footer {
 
 .video {
     position:relative;
-    padding-bottom: 65%;/*пропорции видео 16:9 */
+    padding-bottom: 56.25%;/*пропорции видео 16:9 */
     /*padding-top: ;*/
     height:0;
 }
