@@ -32,7 +32,10 @@
         <div id="liked" title="Liked people"></div>
 
         <div id="donate">
-            <a href="http://paypal.me/MatveyDagaev/5USD"><img src="./images/donate4.png"></a>
+            <img src="./images/donate4.png">
+            <br></br>
+            <p><b>Ethereum</b></p>
+            <p><b>0x6610A25f3086a7FD47B89312E934b5b2B2699d07</b></p>
         </div>
 
         <div id="men">

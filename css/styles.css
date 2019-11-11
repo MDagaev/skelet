@@ -65,6 +65,7 @@ footer {
     top: 8px;
     text-align: center;
     width: 100%;
+    color:grey;
 }
 
 
@@ -173,7 +174,7 @@ footer {
 
 .video {
     position:relative;
-    padding-bottom: 56.25%;/*пропорции видео 16:9 */
+    padding-bottom: 65%;/*пропорции видео 16:9 56.25%*/
     /*padding-top: ;*/
     height:0;
 }
